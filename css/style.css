@@ -1,7 +1,22 @@
-* { margin: 0; padding: 0; list-style: none; text-decoration: none;  }
+* { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+body { color: #222; }
+.clearfix::after { display: block; content: ''; clear: both; height: 0; } /* 마지막에 height는 Cross browsing을 위함 */
 
-header { overflow: hidden; line-height: 100px; text-align: center; background-color: black; }
-header h1 { float: left; padding: 0 50px; color: white; }
-header ul { margin: 0 50px; }
-header ul li { float: left; }
-header ul li a { padding: 0 30px; display: block; color: white; }
+header { height: 74px; background-color: #161b1e; }
+header h1 { float: left; width: 200px; height: 74px; line-height: 74px; padding: 0 50px; text-align: center; color: white; letter-spacing: 5px; font-weight: normal; }
+header .menu { float: left; height: 36px; margin: 19px 0; }
+header .menu > li { float: left; position: relative; }
+header .menu > li > a { display: block; height: 36px; line-height: 36px; padding: 0 20px; color: white; }
+header .menu > li:hover > a { background-color: #96da47; } /* a:hover 에 하는게 아니고 li:hover를 하는 이유는 마우스가 올라갔을때 a:hover가 되면 아래 menu로 마우스를 이동할때 꺼지게 되서 li:hover를 해준다. */
+header .menu > li:hover .sub { visibility: visible; transform: translateY(0px); opacity: 1; transition: all .5s ease; }
+
+.sub { position: absolute; top: 100%; left: 0; width: 500px; padding: 20px; border-top: 1px solid #96da47; background-color: #282d30; visibility: hidden; transform: translateY(20px); opacity: 0; }
+.submenu { float: left; width: 25%; }
+.submenu li {  }
+.submenu li a { display: block; height: 28px; line-height: 28px; color: #eee; font-size: 14px; }
+.submenu li a:hover { color: #96da47; }
+.submenu li.subtitle { color: #fff; font-size: 15px; margin-bottom: 10px; }
+
+/* image slide를 적용할 건데 google에 swipe jqeury라고 검색을 하지만 오늘은 사용하지 않고 ㅋㅋ owl jqeury를 찾아서 이걸 사용할 거다. owl carousel 2.1을 적용시킬 거다. */

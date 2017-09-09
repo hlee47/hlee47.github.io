@@ -20,3 +20,17 @@
 /*
     github에 들어가서 내 아이디 클릭, repository tab을 클릭해서 새로 하나 만들기 들어가서 repository name에다가 hlee47.github.io (앞에 hlee47는 아무거나 적어도 되는데 뒤에 .github.io를 꼭 똑같이 적어야 한다.) 그 다음 만들어 준다.
 */
+
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    items:1,
+    loop:true,
+    margin:10,
+    responsive:{
+        1000:{
+            items:1
+        }
+    }
+})
+});
+
