@@ -60,3 +60,4 @@ header .menu > li:hover .sub { visibility: visible; transform: translateY(0px); 
 .view_inner .image .thumnails .motion { transform: rotateY(90deg) scale(0.8); transition: all .6s ease; }
 .view_inner .image .thumnails:hover .motion { transform: rotateY(0) scale(1); }
 
+/**/
