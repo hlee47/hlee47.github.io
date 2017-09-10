@@ -45,6 +45,8 @@
     - 반응형
     - 하이브리드 ( 웹 + 모바일웹 )
     - 네이티브 ( 웹 + 앱 )
-    
-    
 ```
+
+<!-- 선생님의 github주소는 github.com/riahnrhyme 이다. -->
+<!-- 우리는 http://opencart.templatemela.com/OPC09/OPC090210/ 웹사이트를 보고 만들 것이다. -->
+<!-- 어제는 owl을 썻었는데 오늘은 swiper를 사용할 것이다. 이걸 왜 쓰냐면 모바일이랑 좀 시너지가 좋단다.  -->

@@ -21,3 +21,42 @@ header .menu > li:hover .sub { visibility: visible; transform: translateY(0px); 
 
 /* image slide를 적용할 건데 google에 swipe jqeury라고 검색을 하지만 오늘은 사용하지 않고 ㅋㅋ owl jqeury를 찾아서 이걸 사용할 거다. owl carousel 2.1을 적용시킬 거다. */
 .slider .banner { width: 100%; }
+
+#dealSection { padding: 40px 0; background: #96da47; }
+.deal { height: 46px; text-align: center; line-height: 46px; }
+.deal > div { display: inline-block; vertical-align: middle; }
+.deal_title { color: #fff; font-family: impact; font-size: 30px; }
+.dash { width: 40px; height: 1px; background: #222; margin: 0 10px; }
+.deal_desc { font-size: 28px; }
+.deal_btn { width: 140px; background: #fff; color: #222; font-weight: bold; margin-left: 20px; font-size: 12px; cursor: pointer; position: relative; }
+
+.deal_btn::after { content: 'VIEW ALL OFFERS'; display: block; color: #fff; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #222; transform: scaleY(0); transform-origin: bottom; transition: all .4s ease; } /* 태그가 아니다 보니깐 (가상선택자) content: 를 태그인 것 처럼 보이기 위해서 꼭 넣어줘야 한다. */
+
+.deal_btn:hover::after { transform: scaleY(1); } /* hover가 after보다 먼저 나와야 한다 왜냐면 after는 가상 선택자라 선택을 할 수 없고 deal_btn은 선택이 가능 */
+
+#productView { padding: 80px 0; width: 1200px; margin: 0 auto; }
+.product_title { text-align: center; font-family: impact; font-size: 30px; }
+.under_line { margin: 20px auto 30px; width: 30px; height: 1px; background: #ccc; }
+
+.view_item { width: 25%; float: left; }
+.view_inner { margin: 0 15px; }
+.view_inner .image .thumnails { position: relative; }
+.view_inner .image .thumnails img { display: block; } /* 이걸 왜 넣는거냐면 아래의 공백을 없애기 위해서이다. 이거 img를 하게 되면 아래에 공백이 생기게 되는게 그걸 없애기 위한게 display: block 이다...*/
+.view_inner .image .thumnails .motion { position: absolute; top: 0; left: 0; }
+.view_inner .image .thumnails .dp, .view_inner .motion { width: 100%; }
+
+.view_inner .image { position: relative; }
+.view_inner .image .block { position: absolute; bottom: 0; width: 100%; padding: 3px 2px; box-sizing: border-box; }
+.view_inner .image .block .block_list {  }
+.view_inner .image .block .block_list li { width: 40px;  height: 40px; background: #fff; float: left; margin: 0 1px; text-align: center; line-height: 40px; }
+.view_inner .image .block .block_list li.cart { width: calc(100% - 86px); } /* nth-child는 되도록이면 안쓰는게 좋다. 중간에 고칠때, plugin들이 들어갈때 너무 힘들다. */
+
+/* 기능을 만들어 보자 */
+.view_inner .image { overflow: hidden; }
+.view_inner .image .block { transform: translateY(100%); transition: all .6s ease; }
+.view_inner:hover .block { transform: translateY(0); }
+
+.view_inner .image .thumnails { perspective: 500px; }
+.view_inner .image .thumnails .motion { transform: rotateY(90deg) scale(0.8); transition: all .6s ease; }
+.view_inner .image .thumnails:hover .motion { transform: rotateY(0) scale(1); }
+
