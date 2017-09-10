@@ -20,4 +20,4 @@ header .menu > li:hover .sub { visibility: visible; transform: translateY(0px); 
 .submenu li.subtitle { color: #fff; font-size: 15px; margin-bottom: 10px; }
 
 /* image slide를 적용할 건데 google에 swipe jqeury라고 검색을 하지만 오늘은 사용하지 않고 ㅋㅋ owl jqeury를 찾아서 이걸 사용할 거다. owl carousel 2.1을 적용시킬 거다. */
-.slider .banner { width: 100%;  }
+.slider .banner { width: 100%; }
